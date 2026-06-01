@@ -70,9 +70,9 @@ If no key is found, enter one manually in the sidebar.
 
 ```mermaid
 flowchart LR
-  Browser[Browser / Streamlit UI] -->|user actions| StreamlitApp[Streamlit app (chatbot.py)]
-  StreamlitApp -->|auth & chat requests| GroqAPI[Groq API]
-  StreamlitApp -->|save/load| LocalFile[chat_history.json / .env]
+  Browser["Browser / Streamlit UI"] -->|user actions| StreamlitApp["Streamlit app (chatbot.py)"]
+  StreamlitApp -->|auth & chat requests| GroqAPI["Groq API"]
+  StreamlitApp -->|save/load| LocalFile["chat_history.json / .env"]
   LocalFile -->|load env key| StreamlitApp
   GroqAPI -->|streamed responses| StreamlitApp
   StreamlitApp -->|render chat| Browser
